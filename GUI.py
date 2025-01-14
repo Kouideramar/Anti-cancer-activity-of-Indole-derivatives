@@ -53,7 +53,7 @@ def predict_ic50():
         
         # Predict IC50
         log_ic50 = model.predict(input_scaled)
-        ic50 = np.exp(log_ic50)  # Reverse log-transform
+        ic50 = 10**(log_ic50)  # Reverse log-transform
 
         # Display the result in a new pop-up
         messagebox.showinfo("Prediction Result", f"Predicted IC50: {ic50[0]:.4f} µM")
@@ -65,7 +65,7 @@ def predict_ic50():
 # Create the main window
 root = Tk()
 root.title("IC50 Prediction")
-root.geometry("1200x700")  # Increased window dimensions
+root.geometry("800x500")  # Increased window dimensions
 
 # Create a canvas for scrolling
 canvas = Canvas(root)

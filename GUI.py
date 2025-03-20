@@ -1,3 +1,5 @@
+# --- Paper: https://doi.org/10.1016/j.compbiomed.2025.109988 --- %
+
 # Import necessary libraries
 import os
 import sys
